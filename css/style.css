@@ -81,7 +81,7 @@ nav a:hover {
    HERO
    ========================================================= */
 
-.hero {
+/* .hero {
     min-height: 680px;
     display: flex;
     align-items: center;
@@ -96,6 +96,46 @@ nav a:hover {
 
 .hero-content {
     padding: 90px 0;
+} */
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            135deg,
+            #f4f8f6 0%,
+            #ffffff 55%,
+            #edf5f2 100%
+        );
+}
+
+.hero-content {
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.hero-text {
+    max-width: 680px;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-visual img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
 }
 
 .hero-text {
@@ -350,6 +390,18 @@ footer {
    ========================================================= */
 
 @media (max-width: 850px) {
+
+   .hero-content {
+        grid-template-columns: 1fr;
+}
+
+   .hero-visual {
+        order: -1;
+}
+
+   .hero-visual img {
+        max-width: 600px;
+}
 
     .nav-container {
         flex-direction: column;
